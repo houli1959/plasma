@@ -33,9 +33,12 @@ p1 {font-family: Helvetica, Arial, sans-serif; font-size: 14px; color: #A9A9A9;}
   
   <br/>
 
+  <!-- Modified Link to include tracking with CountAPI -->
+  <a href="javascript:void(0);" onclick="trackDownload()">Download: WaferViz4.3</a>
 
 
-  <a href="https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA">Download: WaferViz4.3</a>
+  
+  <!-- <a href="https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA">Download: WaferViz4.3</a> -->
 
 
 
@@ -108,6 +111,32 @@ p1 {font-family: Helvetica, Arial, sans-serif; font-size: 14px; color: #A9A9A9;}
   <p>Click "How to use" in the left sidebar for instruction. 
   
 </div>
+
+
+
+
+<script>
+   // Function to track the download using CountAPI
+   function trackDownload() {
+     fetch('https://api.countapi.xyz/hit/mygithubsite.com/waferviz')
+       .then(() => {
+         // Redirect to the OneDrive download link after tracking
+         window.location.href = "https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA";
+       })
+       .catch(err => {
+         console.log("Error tracking download:", err);
+         window.location.href = "https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA"; // Fallback in case tracking fails
+       });
+  }
+</script>
+
+
+
+  
+
+
+
+  
 </body>
 </html> 
 
