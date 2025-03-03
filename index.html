@@ -1,142 +1,139 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>A Free Wafer Plotting Software for Semiconductor Engineers</title>  
+  <meta name="description" content="WaferViz: Wafer Data Visualization">
   
-<title>A Free Wafer Plotting Software for Semiconductor Engineers</title>  
-<meta name="description" content="WaferViz: Wafer Data Visualization">
-  
-<style>
-body {width: 100%; height: 100%; font-family: sans-serif;} 
-img {width: 100%; height: auto;}
+  <style>
+    body {width: 100%; height: 100%; font-family: sans-serif;} 
+    img {width: 100%; height: auto;}
 
-.sidenav {height: 100%; width: 180px; position: fixed; z-index: 1; top: 0; left: 0; background-color: #f1f1f1; overflow-x: hidden; padding-top: 60px;}
-.sidenav a {padding: 8px 8px 8px 32px; text-decoration: none; font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: #006699; display: block;}
-<!-- link for 3.6: href="https://onedrive.live.com/embed?cid=F59025A727E10A01&resid=F59025A727E10A01%21222&authkey=AOgZ6lSAbvWn9i4"  -->
-  
-<!--.sidenav a:hover {color: #006699;}-->
+    .sidenav {
+      height: 100%; 
+      width: 180px; 
+      position: fixed; 
+      z-index: 1; 
+      top: 0; 
+      left: 0; 
+      background-color: #f1f1f1; 
+      overflow-x: hidden; 
+      padding-top: 60px;
+    }
+    
+    .sidenav a {
+      padding: 8px 8px 8px 32px; 
+      text-decoration: none; 
+      font-family: Helvetica, Arial, sans-serif; 
+      font-size: 13px; 
+      color: #006699; 
+      display: block;
+    }
 
-.main {margin-left: 180px; /* Same as the width of the sidenav */margin-right: 18px; font-size: 18px; /* Increased text to enable scrolling */padding: 10px 10px;}
+    .main {
+      margin-left: 180px; 
+      margin-right: 18px; 
+      font-size: 18px; 
+      padding: 10px 10px;
+    }
 
-@media screen and (max-height: 450px) {.sidenav {padding-top: 15px;}.sidenav a {font-size: 14px;}}
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 14px;}
+    }
   
-h1 {font-family: Trebuchet MS, Helvetica, sans-serif; font-size: 28px; color: #006699;}
-h2 {font-family: Helvetica, Arial, sans-serif; font-size: 14px; color: #006699;} 
-h3 {font-family: Helvetica, Arial, sans-serif; font-size: 14px; color: #006699;}   
-p {font-family: Helvetica, Arial, sans-serif; font-size: 14px;}  
-p1 {font-family: Helvetica, Arial, sans-serif; font-size: 14px; color: #A9A9A9;}  
+    h1 {font-family: Trebuchet MS, Helvetica, sans-serif; font-size: 28px; color: #006699;}
+    h2 {font-family: Helvetica, Arial, sans-serif; font-size: 14px; color: #006699;} 
+    h3 {font-family: Helvetica, Arial, sans-serif; font-size: 14px; color: #006699;}   
+    p {font-family: Helvetica, Arial, sans-serif; font-size: 14px;}  
+    p1 {font-family: Helvetica, Arial, sans-serif; font-size: 14px; color: #A9A9A9;}  
   
-</style>  
+  </style>  
 </head>
   
 <body>
-<div class="sidenav">
-  
-  <br/>
+  <div class="sidenav">
+    <br/>
 
-  <!-- Modified Link to include tracking with CountAPI -->
-  <a href="javascript:void(0);" onclick="trackDownload()">Download: WaferViz4.3</a>
-
-
-  
-  <!-- <a href="https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA">Download: WaferViz4.3</a> -->
-
-
-
-  <br/>
-  <br/>
-  <br/>
-
-  <a href="https://onedrive.live.com/embed?resid=F59025A727E10A01%21268&authkey=!AG55A9qfJDQ5SRM&em=2">How to use</a>
-  <a href="https://onedrive.live.com/embed?resid=F59025A727E10A01%21270&authkey=!ANLpARXuiKf5QpQ&em=2">Datasheet sample</a>
-  <a href="https://onedrive.live.com/embed?resid=F59025A727E10A01%21269&authkey=!AGllMCEGSYe58BQ&em=2">Atlas exported data sample</a>
+    <!-- Modified Link to include tracking with CountAPI -->
+    <a href="javascript:void(0);" onclick="trackDownload()">Download: WaferViz4.3</a>
 
 
   
-  <br/>
-  <br/>
-  <br/>
-  <a href="https://www.linkedin.com/in/li-hou-aba82728/">LinkedIn</a>
-  <a href="mailto: li.hou2009@gmail.com">Email</a>
-
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>  
-  <br/>
-  <br/>
-  <br/>
-
-  
-  
-  <br/>
-
-  
-  <?php
-  $txt = "PHP";
-  echo "test  $txt!";
-  ?>
-  
-</div>
-
-<div class="main">
-  <h1>Wafer Visualization - WaferViz</h1>
-  
-  <h2>About</h2>
-  <p>WaferViz is a free wafer plotting software intended for semiconductor engineers.
-  <br>As a process engineer myself I found it is helpful having plotting program handy for converting raw data to presentable graphs since in fabs where plotting programs are often embedded in metrology tools and not readily accessible.</p>
-
-  <h2>User Interface</h2>
-  <img src="ui.png" alt="gui" width="1280" height="720">
-  
-  <h2>Key Features</h2>
-  
-  <p>- Animated 3d map:</p>
-  <img src="rgb_cube.gif" alt="example0" style="max-width:50%; max-height:50%;">
-  <br/>
-  
-  <p>- 3d maps with profile decomposition:</p>
-  <img src="example1.png" alt="example1" width="1280" height="720">
-  
-  <p>- 2d maps with rotation:
-  <br>- Cross sectional graphs:</p>
-  <img src="cross.png" alt="cross" width="1280" height="720">
-  
-  <p>- Thickness as radius and theta increasing: 
-  <br>- Thickness distribution:</p>
-  <img src="example3.png" alt="example3" width="1280" height="720">
-  
-  <h2>User Guide</h2>
-  <p>Click "How to use" in the left sidebar for instruction. 
-  
-</div>
+    <!-- <a href="https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA">Download: WaferViz4.3</a> -->
 
 
 
+    <br/>
+    <br/>
+    <br/>
 
-<script>
-   // Function to track the download using CountAPI
-   function trackDownload() {
-     fetch('https://api.countapi.xyz/hit/mygithubsite.com/waferviz')
-       .then(() => {
-         // Redirect to the OneDrive download link after tracking
-         window.location.href = "https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA";
+    <a href="https://onedrive.live.com/embed?resid=F59025A727E10A01%21268&authkey=!AG55A9qfJDQ5SRM&em=2">How to use</a>
+    <a href="https://onedrive.live.com/embed?resid=F59025A727E10A01%21270&authkey=!ANLpARXuiKf5QpQ&em=2">Datasheet sample</a>
+    <a href="https://onedrive.live.com/embed?resid=F59025A727E10A01%21269&authkey=!AGllMCEGSYe58BQ&em=2">Atlas exported data sample</a>
+    
+    <br/>
+    <br/>
+    <br/>
+    
+    <a href="https://www.linkedin.com/in/li-hou-aba82728/">LinkedIn</a>
+    <a href="mailto: li.hou2009@gmail.com">Email</a>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>  
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+  </div>
+
+  <div class="main">
+    <h1>Wafer Visualization - WaferViz</h1>
+  
+    <h2>About</h2>
+    <p>WaferViz is a free wafer plotting software intended for semiconductor engineers.
+    <br>As a process engineer myself I found it is helpful having plotting program handy for converting raw data to presentable graphs since in fabs where plotting programs are often embedded in metrology tools and not readily accessible.</p>
+
+    <h2>User Interface</h2>
+    <img src="ui.png" alt="gui" width="1280" height="720">
+  
+    <h2>Key Features</h2>
+    <p>- Animated 3d map:</p>
+    <img src="rgb_cube.gif" alt="example0" style="max-width:50%; max-height:50%;">
+    
+    <br/>
+  
+    <p>- 3d maps with profile decomposition:</p>
+    <img src="example1.png" alt="example1" width="1280" height="720">
+  
+    <p>- 2d maps with rotation:
+    <br>- Cross sectional graphs:</p>
+    <img src="cross.png" alt="cross" width="1280" height="720">
+  
+    <p>- Thickness as radius and theta increasing: 
+    <br>- Thickness distribution:</p>
+    <img src="example3.png" alt="example3" width="1280" height="720">
+  
+    <h2>User Guide</h2>
+    <p>Click "How to use" in the left sidebar for instruction.
+  </div>
+  
+  <script>
+    function trackDownload() {
+      fetch('https://api.countapi.xyz/hit/mygithubsite.com/waferviz')
+        .then(() => {
+          window.location.href = "https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA";
        })
-       .catch(err => {
-         console.log("Error tracking download:", err);
-         window.location.href = "https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA"; // Fallback in case tracking fails
-       });
-  }
-</script>
+        .catch(err => {
+          console.log("Error tracking download:", err);
+          window.location.href = "https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA"; // Fallback in case tracking fails
+        });
+    }
+  </script>
 
-
-
-  
-
-
-
-  
 </body>
 </html> 
 
