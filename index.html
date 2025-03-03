@@ -55,11 +55,11 @@
     <br/>
 
     <!-- Modified Link to include tracking with CountAPI -->
-    <a href="javascript:void(0);" onclick="trackDownload()">Download: WaferViz4.3</a>
+    <!-- <a href="javascript:void(0);" onclick="trackDownload()">Download: WaferViz4.3</a> -->
 
 
   
-    <!-- <a href="https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA">Download: WaferViz4.3</a> -->
+    <a href="https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA">Download: WaferViz4.3</a> 
 
 
 
@@ -120,19 +120,8 @@
     <h2>User Guide</h2>
     <p>Click "How to use" in the left sidebar for instruction.
   </div>
-  
-  <script>
-    function trackDownload() {
-      fetch('https://api.countapi.xyz/hit/mygithubsite.com/waferviz')
-        .then(() => {
-          window.location.href = "https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA";
-       })
-        .catch(err => {
-          console.log("Error tracking download:", err);
-          window.location.href = "https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA"; // Fallback in case tracking fails
-        });
-    }
-  </script>
+
+
 
 </body>
 </html> 
