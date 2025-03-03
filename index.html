@@ -122,23 +122,16 @@
   </div>
 
 
-
-
   <script>
     function trackDownload() {
+      window.location.href = "https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA";
       fetch('https://api.countapi.xyz/hit/mygithubsite.com/waferviz')
-        .then(() => {
-          window.location.href = "https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA";
-       })
         .catch(err => {
           console.log("Error tracking download:", err);
-          window.location.href = "https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA"; // Fallback in case tracking fails
         });
     }
   </script>  
 
-
-  
 
 </body>
 </html> 
