@@ -54,14 +54,8 @@
   <div class="sidenav">
     <br/>
 
-   
     <a href="javascript:void(0);" onclick="trackDownload()">Download: WaferViz4.3</a>
-
-
-  
     <!-- <a href="https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA">Download: WaferViz4.3</a> -->
-
-
 
     <br/>
     <br/>
@@ -119,19 +113,19 @@
   
     <h2>User Guide</h2>
     <p>Click "How to use" in the left sidebar for instruction.
+      
   </div>
-
 
   <script>
     function trackDownload() {
-      window.location.href = "https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA";
-      fetch('https://api.countapi.xyz/hit/mygithubsite.com/waferviz')
-        .catch(err => {
-          console.log("Error tracking download:", err);
-        });
+      window.open("https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA", "_blank");
+      
+      setTimeout(() => {
+        fetch('https://api.countapi.xyz/hit/mygithubsite.com/waferviz')
+          .catch(err => console.log("Error tracking download:", err));
+      }, 1000);       
     }
-  </script>  
-
+  </script>    
 
 </body>
 </html> 
