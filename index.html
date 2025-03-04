@@ -82,6 +82,7 @@
     <br/>
     <br/>
     <br/>
+    
   </div>
 
   <div class="main">
@@ -115,17 +116,21 @@
     <p>Click "How to use" in the left sidebar for instruction.
       
   </div>
-
+  
   <script>
     function trackDownload() {
-      window.location.href = "https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA";
-      
-      setTimeout(() => {
-        fetch('https://api.countapi.xyz/hit/mygithubsite.com/waferviz')
-          .catch(err => console.log("Error tracking download:", err));
-      }, 1000);       
+      fetch('https://api.countapi.xyz/hit/mygithubsite.com/waferviz')
+        .then(() => {
+          setTimeout(() => {
+            window.location.href = "https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA";
+          }, 500);
+        })
+        .catch(err => {
+          console.log("Error tracking download:", err);
+          window.location.href = "https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA";
+        });
     }
-  </script>    
+  </script>
 
 </body>
 </html> 
