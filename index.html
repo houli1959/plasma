@@ -53,8 +53,8 @@
 <body>
   <div class="sidenav">
     <br/>
-
-    <a href="javascript:void(0);" id="downloadButton">Download: WaferViz4.3</a>
+    
+    <a href="https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA">Download: WaferViz4.3</a>    
     
     <br/>
     <br/>
@@ -119,54 +119,6 @@
       
   </div>
 
-  <script>
-    
-    const downloadButton = document.getElementById('downloadButton');
-    const downloadStatus = document.getElementById('downloadStatus');
-    const downloadCount = document.getElementById('downloadCount');
-    const downloadUrl = "https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA";
-    const countApiUrl = 'https://api.countapi.xyz/hit/mygithubsite.com/waferviz';
-    const getCountApiUrl = 'https://api.countapi.xyz/get/mygithubsite.com/waferviz';
-
-    downloadButton.addEventListener('click', () => {
-      downloadStatus.textContent = "Tracking download...";
-
-      fetch(countApiUrl)
-        .then(() => {
-          downloadStatus.textContent = "Getting download count...";
-          return fetch(getCountApiUrl);
-        })
-        .then(response => response.json())
-        .then(data => {
-          downloadCount.textContent = `Total downloads: ${data.value}`;
-          downloadStatus.textContent = "Redirecting to download...";
-          setTimeout(() => {
-            window.location.href = downloadUrl;
-          }, 1000); // Wait 1 second before redirecting
-        })
-        .catch(err => {
-          console.error("Error tracking download:", err);
-          downloadStatus.textContent = "Error tracking download. Redirecting directly.";
-          setTimeout(() => {
-            window.location.href = downloadUrl;
-          }, 1000); // Redirect even if error
-        });
-    });
-
-    //get the initial count when the page loads.
-    window.onload = function() {
-        fetch(getCountApiUrl)
-        .then(response => response.json())
-        .then(data => {
-          downloadCount.textContent = `Total downloads: ${data.value}`;
-
-        })
-        .catch(err => {
-          console.error("Error getting initial download count:", err);
-        });
-    };
-
-  </script>
 </body>
 </html> 
 
