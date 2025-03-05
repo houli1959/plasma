@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
   <title>A Free Wafer Plotting Software for Semiconductor Engineers</title>  
   <meta name="description" content="WaferViz: Wafer Data Visualization">
   
@@ -47,10 +46,8 @@
     h3 {font-family: Helvetica, Arial, sans-serif; font-size: 14px; color: #006699;}   
     p {font-family: Helvetica, Arial, sans-serif; font-size: 14px;}  
     p1 {font-family: Helvetica, Arial, sans-serif; font-size: 14px; color: #A9A9A9;}  
-  
   </style>  
 
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-01EG974GQR"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -66,8 +63,8 @@
   <div class="sidenav">
     <br/>
     
-    <a href="https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA">- Download: WaferViz4.3</a>    
-    
+    <a href="https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA" id="downloadButton">- Download: WaferViz4.3</a>
+     
     <br/>
     <br/>
     <br/>
@@ -93,7 +90,6 @@
     <br/>
     <br/>
     <br/>
-    
   </div>
 
   <div class="main">
@@ -127,10 +123,25 @@
     <p>Click "How to use" in the left sidebar for instruction.</p>
 
     <p id="downloadStatus"></p>
-    <p id="downloadCount"></p>
-      
+    <p id="downloadCount"></p> 
   </div>
 
+  <script>
+    const downloadButton = document.getElementById('downloadButton');
+    const downloadUrl = "https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA";
+    const downloadStatus = document.getElementById('downloadStatus');
+
+    downloadButton.addEventListener('click', () => {
+      gtag('event', 'download', {
+        'event_category': 'Downloads',
+        'event_label': 'WaferViz4.3'
+      });
+      downloadStatus.textContent = "Redirecting to download...";
+      setTimeout(() => {
+        window.location.href = downloadUrl;
+      }, 1000);
+    });
+  </script>
 </body>
 </html> 
 
