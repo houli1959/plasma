@@ -126,22 +126,8 @@
     <p id="downloadCount"></p> 
   </div>
 
-  <script>
-    const downloadButton = document.getElementById('downloadButton');
-    const downloadUrl = "https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA";
-    const downloadStatus = document.getElementById('downloadStatus');
 
-    downloadButton.addEventListener('click', () => {
-      gtag('event', 'download', {
-        'event_category': 'Downloads',
-        'event_label': 'WaferViz4.3'
-      });
-      downloadStatus.textContent = "Redirecting to download...";
-      setTimeout(() => {
-        window.location.href = downloadUrl;
-      }, 1000);
-    });
-  </script>
+  
 </body>
 </html> 
 
