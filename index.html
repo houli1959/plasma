@@ -48,15 +48,6 @@
     p1 {font-family: Helvetica, Arial, sans-serif; font-size: 14px; color: #A9A9A9;}  
   </style>  
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-01EG974GQR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-01EG974GQR');
-</script>
-
 </head>
   
 <body>
@@ -65,7 +56,7 @@
     <br/>
     <br/>
     
-    <a href="https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA" id="downloadButton">Download WaferViz</a>    
+    <a href="https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA">Download WaferViz</a>    
     <br/>
     
     <a href="https://onedrive.live.com/embed?resid=F59025A727E10A01%21268&authkey=!AG55A9qfJDQ5SRM&em=2">How to use</a>
@@ -122,26 +113,8 @@
     <h2>User Guide</h2>
     <p>Click "How to use" in the left sidebar for instruction.</p>
 
-    <p id="downloadStatus"></p>
-    <p id="downloadCount"></p>
   </div>
 
-  <script>
-    const downloadButton = document.getElementById('downloadButton');
-    const downloadUrl = "https://1drv.ms/u/c/f59025a727e10a01/IQIBCuEnpyWQIID1xwEAAAAAALv1fPunNZ14EbYAAAAAAAA";
-    const downloadStatus = document.getElementById('downloadStatus');
-
-    downloadButton.addEventListener('click', () => {
-      gtag('event', 'download', {
-        'event_category': 'Downloads',
-        'event_label': 'WaferViz4.3'
-      });
-      downloadStatus.textContent = "Redirecting to download...";
-      setTimeout(() => {
-        window.location.href = downloadUrl;
-      }, 1000);
-    });
-  </script>
 </body>
 </html> 
 
