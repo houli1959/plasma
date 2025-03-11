@@ -48,6 +48,15 @@
     p1 {font-family: Helvetica, Arial, sans-serif; font-size: 14px; color: #A9A9A9;}  
   </style>  
 
+<!-- Google Analytics GA4 Tracking Code -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-01EG974GQR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-01EG974GQR'); // Replace with your GA4 Measurement ID
+  </script>
+
 </head>
   
 <body>
@@ -55,17 +64,21 @@
     <br/>
     <br/>
     <br/>
-    
-    <a href="https://drive.google.com/uc?export=download&id=1cFvbPYrKl5ilqaGTRP2PSXQDg1S5UYH1" download="WaferViz4.3.exe">Download WaferViz</a>    
+
+    <!-- Updated Download Link with GA4 Event Tracking -->
+    <a href="https://drive.google.com/uc?export=download&id=1cFvbPYrKl5ilqaGTRP2PSXQDg1S5UYH1" download="WaferViz4.3.exe" onclick="gtag('event', 'click', {'event_category': 'Downloads', 'event_label': 'WaferViz4.3.exe'});">Download WaferViz</a>    
     <br/>
   
-    <a href="https://raw.githubusercontent.com/houli1959/plasma/main/How%20to%20plot.pdf">How to Use</a>
+    <!-- Updated PDF Link with GA4 Event Tracking -->
+    <a href="https://raw.githubusercontent.com/houli1959/plasma/main/How%20to%20plot.pdf" onclick="gtag('event', 'click', {'event_category': 'Downloads', 'event_label': 'How_to_Use.pdf'});">How to Use</a>
     <br/>
     
-    <a href="https://raw.githubusercontent.com/houli1959/plasma/main/Workbook%20data.xlsx">Datasheet Sample</a>
+    <!-- Updated Excel Link with GA4 Event Tracking -->
+    <a href="https://raw.githubusercontent.com/houli1959/plasma/main/Workbook%20data.xlsx" onclick="gtag('event', 'click', {'event_category': 'Downloads', 'event_label': 'Workbook_data.xlsx'});">Datasheet Sample</a>
     <br/>       
 
-    <a href="https://raw.githubusercontent.com/houli1959/plasma/main/Atlas%20data.xlsx">Atlas Exported Data Sample</a>
+    <!-- Updated Excel Link with GA4 Event Tracking -->
+    <a href="https://raw.githubusercontent.com/houli1959/plasma/main/Atlas%20data.xlsx" onclick="gtag('event', 'click', {'event_category': 'Downloads', 'event_label': 'Atlas_Exported_Data.xlsx'});">Atlas Exported Data Sample</a>
     <br/>
     
     <a href="https://www.linkedin.com/in/li-hou-aba82728/">LinkedIn</a>
